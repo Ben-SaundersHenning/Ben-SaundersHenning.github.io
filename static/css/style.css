@@ -14,6 +14,43 @@ body {
     padding: 20px;
 }
 
+#app {
+    border: 2px solid white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    grid-column-gap: 50px;
+    width: 100%;
+}
+
+#app > .header {
+
+    grid-area: 1 / 1 / 2 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#app > .subheader {
+
+    grid-area: 2 / 1 / 3 / 1;
+
+}
+
+h2, h3, h4, h5, h6 {
+    padding-left: 20%;
+}
+
+#app > #content {
+
+    grid-area: 3 / 1 / 4 / 1;
+    padding-left: 20%;
+    padding-right: 20%;
+    border: 2px solid yellow;
+
+}
+
 focus-box {
     box-sizing: border-box;
     border: 5px double #2C2C2F;

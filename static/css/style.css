@@ -29,7 +29,7 @@ focus-box {
     padding: 30px;
     font-size: 40px;
     text-align: center;
-    background: white;
+    background: #2C2C2C;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -55,7 +55,7 @@ focus-box {
 
 /* Add a card effect for articles */
 .card {
-    background-color: white;
+    background-color: #2C2C2C;
     padding: 20px;
     margin-top: 20px;
 }

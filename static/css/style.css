@@ -1,16 +1,24 @@
+:root {
+    --font-headings: unset;
+    --font-base: unset;
+    --font-headings-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    --font-base-default: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+
 * {
     box-sizing: border-box;
 }
 
 html {
-    color: #E3E3E3;
+    color: #EADFC8;
     font-size: 100%
 }
 
 body {
-    font-size: 1.35em;
-    font-family: Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-    background-color: #2C2C2C;
+    font-size: 1.25rem;
+    font-family: DM Sans, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    background-color: #1F2123;
     padding: 20px;
 }
 
@@ -18,7 +26,7 @@ body {
     border: 2px solid white;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr auto;
+    grid-template-rows: 1fr 0.3fr auto;
     grid-column-gap: 50px;
     width: 100%;
 }
@@ -32,33 +40,91 @@ body {
 
 }
 
+.subheader {
+    padding-left: 15%;
+}
+
 #app > .subheader {
 
     grid-area: 2 / 1 / 3 / 1;
 
 }
 
-h2, h3, h4, h5, h6 {
-    padding-left: 20%;
-}
-
-#app > #content {
+#blog {
 
     grid-area: 3 / 1 / 4 / 1;
-    padding-left: 20%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+
+    padding-left: 15%;
     padding-right: 20%;
     border: 2px solid yellow;
 
 }
 
-focus-box {
-    box-sizing: border-box;
-    border: 5px double #2C2C2F;
-    border-radius: 10px;
-    width: fit-content;
-    min-width: 320px;
-    background-color: #2C2C2C;
-    margin: 30px auto 0 auto;
+#intro-component {
+    grid-area: 1 / 1 / 1 / 1;
+    border: 2px solid yellow;
+}
+
+#intro-images {
+    grid-area: 1 / 2 / 1 / 2;
+    border: 2px solid red;
+}
+
+#about-component {
+    grid-area: 2 / 1 / 2 / 1;
+    border: 2px solid yellow;
+}
+
+#about-images {
+    grid-area: 2 / 2 / 2 / 2;
+    border: 2px solid red;
+}
+
+#fn-component {
+    grid-area: 3 / 1 / 3 / 1;
+    border: 2px solid yellow;
+}
+#fn-images {
+    grid-area: 3 / 2 / 3 / 2;
+    border: 2px solid red;
+}
+
+#wt-component {
+    grid-area: 4 / 1 / 4 / 1;
+    border: 2px solid yellow;
+}
+#wt-images {
+    grid-area: 4 / 2 / 4 / 2;
+    border: 2px solid red;
+}
+
+.wt1-c {
+    height: auto;
+    transition: height 4s ease-in;
+}
+.wt1-c-1 {
+    height: 0;
+    transition: height 4s ease-in;
+}
+
+.wt-button {
+    color: #EADFC8;
+    font-size: 1.25rem;
+    font-family: DM Sans, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    background-color: #1F2123;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.wt-button:hover {
+    cursor: pointer;
 }
 
 /* Header/Blog Title */
@@ -66,21 +132,7 @@ focus-box {
     padding: 30px;
     font-size: 40px;
     text-align: center;
-    background: #2C2C2C;
-}
-
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {
-    float: left;
-    width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-    float: left;
-    width: 25%;
-    padding-left: 20px;
+    background: #1F2123;
 }
 
 /* Fake image */
@@ -92,30 +144,11 @@ focus-box {
 
 /* Add a card effect for articles */
 .card {
-    background-color: #2C2C2C;
+    background-color: #1F2123;
     padding: 20px;
-    margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Footer */
-.footer {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
     margin-top: 20px;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
-    .leftcolumn, .rightcolumn {
-        width: 100%;
-        padding: 0;
-    }
 }
